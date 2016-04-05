@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tvInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HH   MM  m3 INICIO"
+        android:background="#ffabff92"/>
+
+    <EditText
+        android:id="@+id/txHoraInicial"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvInicio"
+        android:maxLength="2"
+        android:inputType="number"
+        android:hint="@string/tpHoraMinuto" />
+
+    <EditText
+        android:id="@+id/txMinutoInicial"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvInicio"
+        android:layout_toRightOf="@id/txHoraInicial"
+        android:maxLength="2"
+        android:inputType="number"
+        android:hint="@string/tpHoraMinuto" />
+
+    <EditText
+        android:id="@+id/txMedidaInicial"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvInicio"
+        android:layout_toRightOf="@id/txMinutoInicial"
+        android:inputType="number"
+        android:hint="@string/tpMedidaInicial" />
+
+    <TextView
+        android:id="@+id/tvFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txHoraInicial"
+        android:text="HH   MM  m3 FINAL"
+        android:background="#ffabff92"/>
+
+    <EditText
+        android:id="@+id/txHoraFinal"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFinal"
+        android:maxLength="2"
+        android:inputType="number"
+        android:hint="@string/tpHoraMinuto" />
+
+    <EditText
+        android:id="@+id/txMinutoFinal"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFinal"
+        android:layout_toRightOf="@id/txHoraFinal"
+        android:maxLength="2"
+        android:inputType="number"
+        android:hint="@string/tpHoraMinuto" />
+
+    <EditText
+        android:id="@+id/txMedidaFinal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFinal"
+        android:layout_toRightOf="@id/txMinutoFinal"
+        android:inputType="number"
+        android:hint="@string/tpMedidaFinal" />
+
+    <TextView
+        android:id="@+id/tvNumeroOlivos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txHoraFinal"
+        android:text="OLIVOS :"
+        android:background="#ffabff92"/>
+
+    <EditText
+        android:id="@+id/txNumeroOlivos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvNumeroOlivos"
+        android:layout_below="@id/txMedidaFinal"
+        android:inputType="number"
+        android:hint="@string/tpNumeroOlivos" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txHoraFinal"
+        android:layout_toRightOf="@id/txNumeroOlivos"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:onClick="calculaEficiencia"
+        android:text="@string/lbBotonCalcular"
+        android:layout_gravity="center"
+        android:background="#ff32ffbb" />
+
+    <TextView
+        android:id="@+id/lbConsumoReal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btCalcular"
+        android:text="m3 reales "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/lbConsumoTeorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btCalcular"
+        android:layout_toRightOf="@id/lbConsumoReal"
+        android:layout_marginLeft="10dp"
+        android:text="m3 teoricos "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/lbEficiencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbConsumoTeorico"
+        android:layout_centerHorizontal="true"
+        android:text="Eficiencia (%) "
+        android:textSize="20dp" />
+
+</RelativeLayout>
